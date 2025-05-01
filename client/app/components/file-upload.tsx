@@ -14,6 +14,7 @@ const FileUploadComponent = () => {
         if (file) {
           const formData = new FormData();
           formData.append("pdf", file);
+
           await fetch("http://localhost:8080/upload/pdf", {
             method: "POST",
             body: formData,
